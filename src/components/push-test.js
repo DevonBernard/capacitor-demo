@@ -11,16 +11,16 @@ class PushTest extends React.Component {
     this.registerPushNotifications = this.registerPushNotifications.bind(this);
   }
   registerPushNotifications() {
-    this.infoField.value = "PN Registration Attempt\n";
+    this.infoField.value = "PN Registration Attempt...\n";
     PushNotifications.requestPermission().then(result => {
-      this.infoField.value +=  "PN Request Fulfilled\n";
+      this.infoField.value +=  "PN Request Fulfilled...\n";
       if (result.granted) {
         // Register with Apple / Google to receive push via APNS/FCM
-        this.infoField.value += "PN Request Granted\n";
+        this.infoField.value += "PN Request Granted...\n";
         PushNotifications.register();
       } else {
         // Show some error
-        this.infoField.value += "PN Request Not Granted\n";
+        this.infoField.value += "PN Request Not Granted...\n";
       }
     }).catch(err => {
       this.infoField.value += `PN Request Rejected (${err})\n`;
