@@ -31,45 +31,39 @@ class PushTest extends React.Component {
       (token) => {
         this.infoField.value += `PN Registration Successful: '${token.value}'\n`;
         try {
-          this.infoField.value += 'Attempting APN (iOS) Registration';
+          this.infoField.value += 'Attempting APN (iOS) to FCM conversion\n';
           fcm.getToken().then(r => {
-            this.infoField.value += `APN Registration Successful. APN Token: '${r.token}'\n`;
+            this.infoField.value += `APN->FCM Conversion Successful. FCM Token: '${r.token}'\n`;
+            console.log(`iOS FCM: ${r.token}`);
           });
         } catch (err) {
           // device is Android
           this.infoField.value += `APN Registration Failed. Android Token: ${token.value}\n`;
+          console.log(`Android FCM: ${token.value}`)
         }
       }
-    ).catch(() => {
-      this.infoField.value += 'Cannot add "registration" listener.\n';
-    });
+    );
 
     // Some issue with our setup and push will not work
     PushNotifications.addListener('registrationError',
       (error) => {
         this.infoField.value += 'Error on registration: ' + JSON.stringify(error) + '\n';
       }
-    ).catch(() => {
-      this.infoField.value += 'Cannot add "registrationError" listener.\n';
-    });
+    );
 
     // Show us the notification payload if the app is open on our device
     PushNotifications.addListener('pushNotificationReceived',
       (notification) => {
         this.infoField.value += 'Push received: ' + JSON.stringify(notification) + '\n';
       }
-    ).catch(() => {
-      this.infoField.value += 'Cannot add "pushNotificationReceived" listener.\n';
-    });
+    );
 
     // Method called when tapping on a notification
     PushNotifications.addListener('pushNotificationActionPerformed',
       (notification) => {
         this.infoField.value += 'Push action performed: ' + JSON.stringify(notification) + '\n';
       }
-    ).catch(() => {
-      this.infoField.value += 'Cannot add "pushNotificationActionPerformed listener.\n';
-    });
+    );
   }
   render() {
     return (
