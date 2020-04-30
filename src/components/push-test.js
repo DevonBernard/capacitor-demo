@@ -17,7 +17,7 @@ class PushTest extends React.Component {
       if (result.granted) {
         // Register with Apple / Google to receive push via APNS/FCM
         this.infoField.value += "PN Request Granted\n";
-        //PushNotifications.register();
+        PushNotifications.register();
       } else {
         // Show some error
         this.infoField.value += "PN Request Not Granted\n";
@@ -80,6 +80,7 @@ class PushTest extends React.Component {
           placeholder="Not run yet"
           className="form-control"
           rows={10}
+          disabled
         />
       </div>
     );

@@ -34,6 +34,7 @@ class StorageTest extends React.Component {
             ref={(ref) => { this.setField = ref; }}
             defaultValue="Nothing set"
             className="form-control"
+            disabled
           />
         </div>
             
@@ -46,6 +47,7 @@ class StorageTest extends React.Component {
             ref={(ref) => { this.getField = ref; }}
             defaultValue="Nothing got"
             className="form-control"
+            disabled
           />
         </div>
       </div>

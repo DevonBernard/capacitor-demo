@@ -18,7 +18,7 @@ class App extends React.Component {
               <StorageTest />
             </div>
             <div className="row mx-0 mb-3 pb-3 border-bottom">
-              <h3 className="mx-auto">Push Test</h3>
+              <h3 className="mx-auto">Push Notifications Test</h3>
               <PushTest />
             </div>
           </div>
