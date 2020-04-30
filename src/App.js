@@ -1,5 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
+
+import DeviceTest from './components/device-test';
 import StorageTest from './components/storage-test';
 import PushTest from './components/push-test';
 
@@ -14,10 +16,14 @@ class App extends React.Component {
           <img src={logo} className="App-logo" alt="logo" />
           <div className="container">
             <div className="row mx-0 mb-3 pb-3 border-bottom">
+              <h3 className="mx-auto">Device Test</h3>
+              <DeviceTest />
+            </div>
+            <div className="row mx-0 mb-3 pb-3 border-bottom">
               <h3 className="mx-auto">Storage Test</h3>
               <StorageTest />
             </div>
-            <div className="row mx-0 mb-3 pb-3 border-bottom">
+            <div className="row mx-0 mb-3 pb-3">
               <h3 className="mx-auto">Push Notifications Test</h3>
               <PushTest />
             </div>

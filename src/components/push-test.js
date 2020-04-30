@@ -74,7 +74,7 @@ class PushTest extends React.Component {
   render() {
     return (
       <div className="w-100">
-        <button className="btn btn-primary w-100 mb-4" onClick={this.registerPushNotifications}>Register Push Notifcations</button>
+        <button className="btn btn-primary w-100 mb-4" onClick={this.registerPushNotifications}>Register Push Notifications</button>
         <textarea
           ref={(ref) => { this.infoField = ref; }}
           placeholder="Not run yet"
