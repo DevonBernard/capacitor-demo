@@ -1,0 +1,7 @@
+{
+  "name": "dwbCapacitorDemo",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}

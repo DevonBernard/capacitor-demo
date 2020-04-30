@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">DWB Capacitor Demo</string>
+    <string name="title_activity_main">DWB Capacitor Demo</string>
+    <string name="package_name">com.dwbcapacitordemo.client</string>
+    <string name="custom_url_scheme">com.dwbcapacitordemo.client</string>
+</resources>

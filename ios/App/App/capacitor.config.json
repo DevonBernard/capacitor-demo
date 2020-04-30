@@ -1,0 +1,8 @@
+{
+  "appId": "com.dwbcapacitordemo.client",
+  "appName": "DWB Capacitor Demo",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "build",
+  "cordova": {}
+}
