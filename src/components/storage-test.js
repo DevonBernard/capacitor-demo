@@ -8,7 +8,7 @@ class StorageTest extends React.Component {
     this.getStorage = this.getStorage.bind(this);
   }
   setStorage() {
-    const val = Math.floor(Math.random()*10000);
+    const val = Math.floor(Math.random()*10000).toString();
     this.setField.value = `Pending: ${val}`;
     StorageService.setItem('storage-test', val)
       .then((res) => {
@@ -19,7 +19,7 @@ class StorageTest extends React.Component {
   }
   getStorage() {
     StorageService.getItem('storage-test').then((val) => {
-      this.getField.value = val;
+      this.getField.value = `Fulfilled: ${val}`;
     });
   }
   render() {

@@ -17,7 +17,6 @@ export default class StorageService {
     }
 
     static async setItem(key, value) {
-      // Modified to show undefined is returned, not Promise<void>
       const resp = await Storage.set({
         key,
         value
@@ -26,8 +25,8 @@ export default class StorageService {
     }
 
     static async getItem(key) {
-      const { value } = await Storage.get({ key });
-      return value;
+      const ret = await Storage.get({ key });
+      return ret.value;
     }
 
     static async removeItem(key) {
