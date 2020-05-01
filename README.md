@@ -1,4 +1,4 @@
-# DWB Capacitor Demo
+# Capacitor Plugin Demo
 
 This is a demo of Capacitor Plugins (Device, Storage, PushNotifications) in an Ionic + ReactJS environment. This demo application provides a one-page interface to quickly test, observe, and debug how each of these Plugins are initialized and trigger callbacks.
 
